@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries API</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/37c29caf4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="root">
+        <header>
+            <div class="header-top">
+                <div class="nav">
+                    <h2>Where in the World?</h2>
+                    <button id="theme-toggler"><i class="fa-regular fa-moon"></i> Dark Mode</button>
+                </div>
+            </div>
+            <div class="widgets">
+                <div class="search">
+                    <form id="search" action="" method="post">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" name="search" placeholder="Search for a country" id="search" required>
+                    </form>
+                </div>
+                <div class="dropDown">
+                    <button class="dorpDown-btn">filter by region <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="menu hide">
+                        <button id="all">all</button>
+                        <button id="africa">africa</button>
+                        <button id="america">america</button>
+                        <button id="asia">asia</button>
+                        <button id="europe">europe</button>
+                        <button id="oceania">oceania</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="loader hide">
+                <img src="./assets/1490.gif" alt="">
+                <h3>Just a moment, things are in motion...</h3>
+            </div>
+            <div class="not-found hide">
+                <div class="icon">🤔</div>
+                <h3>Sorry, We couldn't find What you were looking for.</h3>
+                <button class="reset" onclick="getCountries()">Show all</button>
+                </div>
+            <div class="countries">
+                <!-- countries -->
+                
+            </div>
+        </main>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
